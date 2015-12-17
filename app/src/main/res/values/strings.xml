@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Password Bank</string>
+    <string name="action_settings">Settings</string>
+    <string name="dayString">يوم</string>
+    <string name="monthString">شهر</string>
+    <string name="yearString">سنة</string>
+    <string name="nameString">الاسم</string>
+    <string name="passwordString">كلمة السر</string>
+    <string name="ErrorString">من فضلك ادخل الاسم</string>
+    <string name="Error1String">من فضلك ادخل كلمة السر</string>
+    <string name="URLString">رابط الموقع</string>
+</resources>
