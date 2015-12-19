@@ -9,4 +9,8 @@
     <string name="ErrorString">من فضلك ادخل الاسم</string>
     <string name="Error1String">من فضلك ادخل كلمة السر</string>
     <string name="URLString">رابط الموقع</string>
+
+    <string name="login">تسجيل الدخول</string>
+    <string name="newUser">مستخدم جديد</string>
+
 </resources>

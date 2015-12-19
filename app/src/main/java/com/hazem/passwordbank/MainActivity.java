@@ -9,14 +9,23 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.eftimoff.patternview.PatternView;
+import com.hazem.passwordbank.common.CommonService;
+import com.hazem.passwordbank.model.Item;
+import com.hazem.passwordbank.model.User;
 
 import fr.ganfra.materialspinner.MaterialSpinner;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    public static User currentUser = null;
+    private CommonService commonService = new CommonService(this);
+    private Button loginButton;
+
     PatternView patternView;
     String patternString;
     private EditText inputName;
@@ -37,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         designPatternView();
         designView();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+        loginButton = (Button) findViewById(R.id.loginButton);
+        if(commonService.getItems().size()== 0) {
+            loginButton.setText(getResources().getText(R.string.newUser));
+        }
+        else {
+            currentUser = commonService.getUser();
+        }
+        loginButton.setOnClickListener(this);
     }
 
     public void designView() {
@@ -83,14 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void designPatternView() {
         patternView = (PatternView) findViewById(R.id.patternView);
-        Toast.makeText(getApplicationContext(), "ENTER PATTERN", Toast.LENGTH_LONG).show();
         patternView.setOnPatternDetectedListener(new PatternView.OnPatternDetectedListener() {
 
             @Override
             public void onPatternDetected() {
                 if (patternString == null) {
                     patternString = patternView.getPatternString();
-//                    patternView.clearPattern();
+                    patternView.clearPattern();
                     return;
                 }
                 if (patternString.equals(patternView.getPatternString())) {
@@ -98,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 Toast.makeText(getApplicationContext(), "PATTERN NOT CORRECT", Toast.LENGTH_SHORT).show();
-//                patternView.clearPattern();
+               patternView.clearPattern();
             }
         });
     }
@@ -128,6 +137,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.loginButton) {
+        }
+    }
+
     class MyTextWatcher implements TextWatcher {
 
         private View view;
@@ -143,14 +158,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void afterTextChanged(Editable editable) {
-            switch (view.getId()) {
+            /*switch (view.getId()) {
                 case R.id.input_name:
                     validateName();
                     break;
                 case R.id.input_password:
                     validatePassword();
                     break;
-            }
+            }*/
         }
     }
 }

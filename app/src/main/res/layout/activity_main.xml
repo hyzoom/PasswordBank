@@ -7,15 +7,6 @@
     android:fitsSystemWindows="true"
     tools:context="com.hazem.passwordbank.MainActivity">
 
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -105,21 +96,23 @@
 
             <com.eftimoff.patternview.PatternView xmlns:patternview="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/patternView"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="5dip"
+                android:layout_margin="@dimen/pattern_margin"
                 android:clickable="false"
                 patternview:circleColor="@color/highlighted_text_material_light"
                 patternview:dotColor="@color/highlighted_text_material_light"
-                patternview:gridColumns="5"
-                patternview:gridRows="5"
-                patternview:pathColor="@color/primary_dark_material_light" />
+                patternview:gridColumns="3"
+                patternview:gridRows="3"
+                patternview:pathColor="@color/color_primary_blue" />
 
             <Button
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="DONE" />
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/login" />
         </LinearLayout>
 
     </ScrollView>
