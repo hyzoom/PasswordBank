@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         yearSpinner.setAdapter(yearsAdapter);
         yearSpinner.setPaddingSafe(0, 0, 0, 0);
 
-        String[] months = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
+        String[] months = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 000"};
         monthSpinner = (MaterialSpinner) findViewById(R.id.monthSpinner);
         monthsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, months);
         monthsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
