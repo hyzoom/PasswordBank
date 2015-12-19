@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         inputLayoutPassword = (TextInputLayout) findViewById(R.id.input_layout_password);
 
 
-        String[] years = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
+        String[] years = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 55", "Item 6"};
         yearSpinner = (MaterialSpinner) findViewById(R.id.yearSpinner);
         yearsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, years);
         yearsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
