@@ -140,6 +140,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.loginButton) {
+            if(commonService.getItems().size()== 0) {
+                String name = inputName.getText().toString();
+                String password = inputPassword.getText().toString();
+
+                Toast.makeText(this, name, Toast.LENGTH_LONG).show();
+            }
+            else {
+
+            }
         }
     }
 
