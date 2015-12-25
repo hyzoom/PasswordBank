@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Password Bank</string>
+    <string name="app_name">بنك كلمات المرور</string>
     <string name="action_settings">Settings</string>
     <string name="dayString">يوم</string>
     <string name="monthString">شهر</string>
@@ -25,5 +25,11 @@
     <!--//////////////////////////////////////////////////////////////////////-->
     <string name="reset_pattern">إعادة تعيين</string>
     <string name="confirm_pattern">تأكيد</string>
+
+    <string name="show_password">إظهار كلمة المرور</string>
+
+    <string name="add_item">إضافة</string>
+    <string name="fill_all_fields">يجب ملئ جميع الحقول</string>
+
 
 </resources>
