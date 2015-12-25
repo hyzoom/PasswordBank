@@ -93,20 +93,6 @@
 
             </LinearLayout>
 
-
-            <com.eftimoff.patternview.PatternView xmlns:patternview="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/patternView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/pattern_margin"
-                android:clickable="false"
-                patternview:circleColor="@color/highlighted_text_material_light"
-                patternview:dotColor="@color/highlighted_text_material_light"
-                patternview:gridColumns="3"
-                patternview:gridRows="3"
-                patternview:pathColor="@color/color_primary_blue" />
-
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"

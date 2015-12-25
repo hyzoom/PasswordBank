@@ -6,11 +6,24 @@
     <string name="yearString">سنة</string>
     <string name="nameString">الاسم</string>
     <string name="passwordString">كلمة السر</string>
-    <string name="ErrorString">من فضلك ادخل الاسم</string>
-    <string name="Error1String">من فضلك ادخل كلمة السر</string>
+    <string name="nameErrorString">من فضلك ادخل الاسم</string>
+    <string name="passwordErrorString">من فضلك ادخل كلمة السر</string>
     <string name="URLString">رابط الموقع</string>
 
     <string name="login">تسجيل الدخول</string>
     <string name="newUser">مستخدم جديد</string>
+    <string name="re_pattern">أعد رسم النقش مرة أخري</string>
+    <string name="wrong_pattern">النقش خاطئ حاول مجددا</string>
+    <string name="right_pattern">النقش صحيح</string>
+
+    <string name="add_pattern">قم بإدخال رمز</string>
+    <string name="dialog_pattern_title">رمز التأكيد</string>
+
+    <string name="user_name_error">الاسم الذي أدخلته غير صحيح</string>
+    <string name="user_password_error">كلمة السر غير صحيحة</string>
+
+    <!--//////////////////////////////////////////////////////////////////////-->
+    <string name="reset_pattern">إعادة تعيين</string>
+    <string name="confirm_pattern">تأكيد</string>
 
 </resources>

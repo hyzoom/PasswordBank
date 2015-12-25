@@ -95,6 +95,8 @@ public class CommonService {
         } catch (SQLException e) {
             Log.e(commonServiceLog, e.getMessage());
         }
+        if (list.size() == 0)
+            return null;
         return list.get(0);
     }
 

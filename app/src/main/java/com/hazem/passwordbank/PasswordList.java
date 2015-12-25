@@ -137,7 +137,7 @@ public class PasswordList extends AppCompatActivity {
 
     private boolean validateName() {
         if (inputName.getText().toString().trim().isEmpty()) {
-            inputLayoutName.setError(getString(R.string.ErrorString));
+            inputLayoutName.setError(getString(R.string.nameErrorString));
             inputName.requestFocus();
             return false;
         } else {
@@ -149,7 +149,7 @@ public class PasswordList extends AppCompatActivity {
 
     private boolean validatePassword() {
         if (inputPassword.getText().toString().trim().isEmpty()) {
-            inputLayoutPassword.setError(getString(R.string.Error1String));
+            inputLayoutPassword.setError(getString(R.string.passwordErrorString));
             inputPassword.requestFocus();
             return false;
         } else {
